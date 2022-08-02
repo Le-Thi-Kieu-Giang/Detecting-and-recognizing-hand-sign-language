@@ -13,7 +13,7 @@ Architecturally, YOLOv5 consists of four main parts: input, backbone, neck, and 
 * In the hand symbol detection task, detection speed and accuracy are critical, and compact model size influences inference efficiency on resource-constrained edge devices.
 * Second, to improve information flow, the YOLOv5 used a path aggregation network (PANet) as its neck. PANet uses a new feature pyramid network (FPN) structure with an improved bottom-up path, which improves low-level feature propagation. Simultaneously, adaptive feature pooling, which connects the feature grid and all feature levels, is used to ensure that useful information in each feature level propagates directly to the next subnetwork. PANet improves the utilization of accurate localization signals in lower layers, which obviously improves the object's location accuracy.
 * Third, the YOLO layer, the head of Yolov5, generates different sizes of feature maps to achieve multi-scale prediction, allowing the model to handle small, medium, and large objects.
-* ![alt text](https://www.researchgate.net/figure/The-network-architecture-of-Yolov5-It-consists-of-three-parts-1-Backbone-CSPDarknet_fig1_349299852)
+![The network architecture of Yolov5](https://user-images.githubusercontent.com/104005551/182420083-a769876c-1192-439e-ab3c-cbdafb653705.png)
 * It consists of three parts: (1) Backbone: CSPDarknet, (2) Neck: PANet, and (3) Head: YOLO Layer. The data is first supplied into CSPDarknet, which extracts features, and then into PANet, which fuses them. Finally, YOLO Layer outputs detection results (class, score, location, size). 
 YOLOv5 include 4 different types: YOLOv5-small, YOLOv5-medium, YOLOv5-large, YOLOv5-extraLarge. In this project, we use YOLOv5-small to train.
 ## III. HAND SYMBOL DETECTION
