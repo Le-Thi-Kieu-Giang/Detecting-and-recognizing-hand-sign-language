@@ -16,12 +16,11 @@ Architecturally, YOLOv5 consists of four main parts: input, backbone, neck, and 
 * It consists of three parts: (1) Backbone: CSPDarknet, (2) Neck: PANet, and (3) Head: YOLO Layer. The data is first supplied into CSPDarknet, which extracts features, and then into PANet, which fuses them. Finally, YOLO Layer outputs detection results (class, score, location, size). 
 YOLOv5 include 4 different types: YOLOv5-small, YOLOv5-medium, YOLOv5-large, YOLOv5-extraLarge. In this project, we use YOLOv5-small to train.
 ## III. HAND SYMBOL DETECTION
-We will use a camera and OpenCV in real-time to detect the hand symbol. It is commonly assumed that videos are composed of still images known as frames. Hand symbol detection was performed in every frame of a video. To detect hand symbols, we'll utilize the YOLOv5 pre-trained model.
-It is a real-time object detection algorithm. Because it has been trained to move quickly. Furthermore, it returns the relative accuracy. It is also intended to distinguish objects in a video or image.
-To begin, the detection of hand symbols involves the detection of a large number of images. In this section, we will label the frames in each image. Then, pass them to the model, which will train and return results.
-The hand symbol variable, which contains the height and width of the rectangle as well as the top-left corner coordinates enclosing the hand, can be used to generate a hand frame.
-The method for preprocessing is the same as the method for training the model described in the second section. The following step is to draw a rectangle on top of the face and label it based on the predictions.
-Though YOLOv5 and its variants are not as accurate. YOLOv5 performs admirably when confronted with standard-sized objects, but it is incapable of detecting small objects.
-When dealing with objects that appear to have rapidly changing properties, accuracy suffers significantly.
+* We will use a camera and OpenCV in real-time to detect the hand symbol. It is commonly assumed that videos are composed of still images known as frames. Hand symbol detection was performed in every frame of a video. To detect hand symbols, we'll utilize the YOLOv5 pre-trained model.
+* It is a real-time object detection algorithm. Because it has been trained to move quickly. Furthermore, it returns the relative accuracy. It is also intended to distinguish objects in a video or image.
+* To begin, the detection of hand symbols involves the detection of a large number of images. In this section, we will label the frames in each image. Then, pass them to the model, which will train and return results.
+* The hand symbol variable, which contains the height and width of the rectangle as well as the top-left corner coordinates enclosing the hand, can be used to generate a hand frame.
+* The method for preprocessing is the same as the method for training the model described in the second section. The following step is to draw a rectangle on top of the face and label it based on the predictions.
+* Though YOLOv5 and its variants are not as accurate. YOLOv5 performs admirably when confronted with standard-sized objects, but it is incapable of detecting small objects. When dealing with objects that appear to have rapidly changing properties, accuracy suffers significantly.
 ## IV. DATA SET
 >We used images from our video to ensure that our learners could handle a variety of hand symbols. We will use a dataset of 4,1950 images cropped from video of hand symbols (including 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, A, B, C, D, E, F, G, H, and I LOVE U) to prepare for the labeling and training process. A label will be attached to each image.
